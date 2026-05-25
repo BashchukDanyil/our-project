@@ -397,7 +397,7 @@ class MemoryGame(Game):
         self.tick()
         
         #add winner new game button
-        self.canvas.after(5000, self.create_over)
+        self.canvas.after(4000, self.create_over)
     def create_over(self):
         if self.GC.game_solved == True:
             self.restart = True
@@ -413,7 +413,7 @@ class MemoryGame(Game):
             btn.bind("<Enter>", lambda e: e.widget.config(bg="red"))
             btn.bind("<Leave>", lambda e: e.widget.config(bg=self.colors['button_bg']))
         else:
-            self.canvas.after(5000, self.create_over)
+            self.canvas.after(4000, self.create_over)
 
         #reveal start position
         # self.GC.position_reveal()
